@@ -197,6 +197,8 @@ i18n.__n = function i18nTranslatePlural(singular, plural, count) {
     msg = vsprintf(msg.one, [parseInt(count, 10)]);
   }
 
+  console.log("fork test")
+
   // if the msg string contains {{Mustache}} patterns we render it as a mini tempalate
   if ((/{{.*}}/).test(msg)) {
     msg = Mustache.render(msg, namedValues);
